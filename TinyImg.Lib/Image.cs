@@ -75,8 +75,6 @@ namespace TinyImg.Lib
 
         public static Image FromBytes(byte[] input)
         {
-            Debug.WriteLine("--------------------------");
-
             var list = input.ToList();
 
             var magic = Encoding.ASCII.GetString(list.Take(4).ToArray());
