@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyImg.CommandLine", "Tiny
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyImg.Lib", "TinyImg.Lib\TinyImg.Lib.csproj", "{56DFB62F-AD24-4A79-BEED-5C39A651BCFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyImg.Tests", "TinyImg.Tests\TinyImg.Tests.csproj", "{171C3CA0-32A6-453B-8EA6-B42DC1DA8D31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{56DFB62F-AD24-4A79-BEED-5C39A651BCFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56DFB62F-AD24-4A79-BEED-5C39A651BCFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56DFB62F-AD24-4A79-BEED-5C39A651BCFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171C3CA0-32A6-453B-8EA6-B42DC1DA8D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171C3CA0-32A6-453B-8EA6-B42DC1DA8D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171C3CA0-32A6-453B-8EA6-B42DC1DA8D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171C3CA0-32A6-453B-8EA6-B42DC1DA8D31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
