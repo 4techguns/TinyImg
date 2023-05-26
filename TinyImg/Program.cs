@@ -6,45 +6,30 @@ namespace TinyImg
 {
     internal class Program
     {
+        // test code, might be nuked later
         static void Main(string[] args)
         {
+            // why didn't i just use unit tests?
             var image = new Image(240, 160);
 
             image.PixelData = new CGAPalette[image.Width * image.Height];
 
             Array.Fill(image.PixelData, CGAPalette.LightGreen, 0, image.Width * image.Height);
 
-
             byte[] imageBytes = image.ToBytes();
 
             File.WriteAllBytes("image.timg", imageBytes);
 
-            Console.WriteLine($"Converted {imageBytes.Length} bytes");
+            Console.WriteLine($"Converted size: {imageBytes.Length} bytes");
 
-            Console.WriteLine($"Running 150 conversions...");
+            // why in the absolute hell did i do this
+            // var file = File.ReadAllBytes("image.timg");
 
-            var stopwatch = new Stopwatch();
+            // test if converting from a byte array is okay
+            var img2 = Image.FromBytes(imageBytes);
 
-            stopwatch.Start();
-
-            for (int i = 0; i < 151; i++)
-            {
-                Console.Write($"{i}\r");
-                image.ToBytes();
-            }
-
-            stopwatch.Stop();
-
-            Console.WriteLine("Done      ");
-            Console.WriteLine($"Time: {stopwatch.Elapsed.TotalSeconds} s");
-            Console.WriteLine($"{150 / stopwatch.Elapsed.TotalSeconds} conversions/s");
-
-            var file = File.ReadAllBytes("image.timg");
-
-            var img2 = Image.FromBytes(file);
-
-            Console.WriteLine("Converted back");
-            Console.WriteLine($"{img2.Magic} v{img2.FileRevisionMajor} {img2.Width}x{img2.Height}");
+            // would it even be necessary to print the magic string? decode function always throws an exception if the magic isn't TIMG
+            Console.WriteLine($"INFO - {img2.Magic} v{img2.FileRevisionMajor} {img2.Width}x{img2.Height}");
         }
     }
 }
