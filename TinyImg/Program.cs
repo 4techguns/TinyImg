@@ -2,7 +2,7 @@
 using TinyImg.Lib;
 using TinyImg.Lib.ColourFormats;
 
-namespace TinyImg
+namespace TinyImg.CommandLine
 {
     internal class Program
     {
