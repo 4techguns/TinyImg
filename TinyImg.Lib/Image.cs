@@ -28,7 +28,7 @@ namespace TinyImg.Lib
         public ushort Height { get; set; }
 
         /// <summary>
-        /// Array of RGBA pixel data.
+        /// Array of CGA pixel data.
         /// </summary>
         public CGAPalette[] PixelData { get; set; }
 
