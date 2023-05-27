@@ -2,7 +2,6 @@
 using TinyImg.Lib;
 
 using Image = TinyImg.Lib.Image;
-using ISImage = SixLabors.ImageSharp.Image;
 
 namespace TinyImg.ImageSharp
 {
