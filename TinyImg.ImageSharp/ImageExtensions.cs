@@ -14,7 +14,7 @@ namespace TinyImg.ImageSharp
             {
                 newImg.ProcessPixelRows((rows) =>
                 {
-                    for (int r = 0; r < img.Height; r++)
+                    for (int r = 0; r < rows.Height; r++)
                     {
                         var row = rows.GetRowSpan(r);
                         var pixels = img.PixelData
@@ -22,12 +22,14 @@ namespace TinyImg.ImageSharp
                             .Take(img.Width)
                             .ToArray();
                         
-                        for (int c = 0; c < img.Width; c++)
+                        for (int c = 0; c < rows.Width; c++)
                         {
                             var originalPixel = pixels[c];
-                            var convertedPixel = row[c];
+                            ref var convertedPixel = ref row[c];
 
-                            convertedPixel = MappingTables.CGA[(byte)originalPixel];
+                            var mapped = MappingTables.CGA[(byte)originalPixel];
+
+                            convertedPixel = mapped;
                         }
                     }
                 });

@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TinyImg.ImageSharp\TinyImg.ImageSharp.csproj" />
     <ProjectReference Include="..\TinyImg.Lib\TinyImg.Lib.csproj" />
   </ItemGroup>
 
